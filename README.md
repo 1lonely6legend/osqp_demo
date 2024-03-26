@@ -73,8 +73,7 @@ $$ \frac{1}{2}X^T
                         0 & 2\end{bmatrix}
                         X + 
                         \begin{bmatrix}
-                        -2\\
-                        -2\end{bmatrix}
+                        -2 & -2\end{bmatrix}
                         X$$
 $s.t.$ 
 $$ \begin{bmatrix}
