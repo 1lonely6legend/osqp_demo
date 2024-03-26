@@ -30,11 +30,15 @@ int main()
     OsqpEigen::Solver solver;
 
     // settings
+    // 设置为false后，不会输出求解过程
     solver.settings()->setVerbosity(false);
+    // 设置为true后，允许热启动，即在上一次求解结果的基础上继续求解
     solver.settings()->setWarmStart(true);
 
     // set the initial data of the QP solver
+    // 设置问题的维度
     solver.data()->setNumberOfVariables(2);   //变量数n
+    // 设置约束的维度
     solver.data()->setNumberOfConstraints(2); //约束数m
     if (!solver.data()->setHessianMatrix(hessian))
         return 1;
